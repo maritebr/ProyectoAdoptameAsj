@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Adoptános</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Proyecto Adoptame">
+        <meta name="keywords" content="frontend, html, html5, css, portfolio, github, desarrollo web">
+        
+        <!--fontawesome-->
+        <script src="https://kit.fontawesome.com/cdd1a44c10.js" crossorigin="anonymous"></script>
+
+        <!--favicon-->
+        <link rel="shortcut icon" href="imagenes/favicon.png"> 
+
+        <!--Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+        <!--CSS-->
+        <link href="css/style2.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <!--HEADER-->
+
+        <div id="hamburguesa-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <header id="header">
+
+            <img src="images/logo.png" class="logo"alt="">
+            <div class="containerP">
+                
+                <div class="containerMenu">
+                    <ul id="menu">
+                        <li><a href="index.html #sectionNosotros" target="_blank">nosotros</a></li>
+                        <li><a href="index.html #aportes" target="_blank" >aportes</a></li>
+                        <li><a href="index1.html" >adóptanos</a></li>
+                        <button id="modalB" class="modalOpenBtn" onclick="openModal('modalB')">contactános</button>
+                    </ul>
+                </div>
+            </div>
+
+        </header>
+
+        <main>
+
+        <section id="filtros" class="filtros">
+
+            <div class="filtroContent">
+            
+                    <div class="textoFiltro">
+            
+                        <h1>TE ESPERAN...</h1>
+                
+                        <p>¡Ellos ya están desparasitados, vacunados y esterilizados!</p>
+
+                    </div>
+
+                    <div class="filtrosVarios">
+
+                    <div class="botonesEspecie">
+
+                        <h4 class="tituloFiltros" >Especie animal </h4>
+                        <br>
+
+                        <div class="botones">
+                                <button class="botonFiltro" onclick="filterObjects('perro')">Perro</button>
+                                <button class="botonFiltro" onclick="filterObjects('gato')">Gato</button>
+                                <button class="botonFiltro" onclick="filterObjects('all')">Todos</button>
+                        </div>
+                    </div>
+
+                    <div class="botonesTamano">
+
+                        <h4 class="tituloFiltros" >Tamaño </h4>
+                        <br>
+
+                        <div class="botones">
+                                <button class="botonFiltro" onclick="filterObjects('chico')">Chico</button>
+                                <button class="botonFiltro" onclick="filterObjects('mediano')">Mediano</button>
+                                <button class="botonFiltro" onclick="filterObjects('grande')">Grande</button>
+                                <button class="botonFiltro" onclick="filterObjects('all')">Todos</button>
+                        </div>
+                    </div>
+
+                    <div class="botonesEdad">
+
+                        <h4 class="tituloEspecie" >Edad promedio </h4>
+                        <br>
+
+                        <div class="botones">
+                                <button class="botonFiltro peque" onclick="filterObjects('anio1')">0 a 1 año</button>
+                                <button class="botonFiltro peque" onclick="filterObjects('anio1a5')">1 a 5 años</button>
+                                <button class="botonFiltro peque" onclick="filterObjects('anio5')">+ 5 años</button>
+                                <button class="botonFiltro" onclick="filterObjects('all')">Todos</button>
+                        </div>
+                    </div>
+
+                    <div class="botonesSexo">
+
+                        <h4 class="tituloEspecie" >Selecciona el sexo </h4>
+                        <br>
+
+                        <div class="botones">
+                                <button class="botonFiltro" onclick="filterObjects('hembra')">Hembra</button>
+                                <button class="botonFiltro" onclick="filterObjects('macho')">Macho</button>
+                                <button class="botonFiltro" onclick="filterObjects('all')">Todos</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section> 
+
+        <section id="galeria" class="galeria">
+
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+
+            <div class="box perro chico anio hembra">
+                <div class="col">
+                  <div class="card" id="card" >
+                    <img src="images/adoptar1.jpg" class="card-img-top" alt="perro en adopcion">
+                    <div class="card-body">
+                      <h4 class="card-title">Pequitas</h4>
+                      <p class="card-text"> Edad: 1 año.</p>
+                      <p class="card-text"> Tamaño: Chica.</p>
+                      <p class="card-text"> Sexo: Hembra.</p>
+                    </div>
+                    <div class="card-footer">
+                      <small class="text-muted">Last updated 3 mins ago</small>
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+              <div class="box perro anio1a5 grande macho">
+                <div class="col">
+                  <div class="card" id="card" >
+                    <img src="images/adoptar2.jpg" class="card-img-top" alt="perro en adopcion">
+                    <div class="card-body">
+                      <h4 class="card-title">Pirata</h4>
+                      <p class="card-text"> Edad: 1 año y medio.</p>
+                      <p class="card-text"> Tamaño: Grande.</p>
+                      <p class="card-text"> Sexo: Macho.</p>
+                    </div>
+                    <div class="card-footer">
+                      <small class="text-muted">Last updated 3 mins ago</small>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="box perro anio1 mediano hembra">
+                <div class="col">
+                  <div class="card" id="card">
+                    <img src="images/adoptar4.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title">Canela</h4>
+                      <p class="card-text"> Edad: 3 meses.</p>
+                      <p class="card-text"> Tamaño: Mediana.</p>
+                      <p class="card-text"> Sexo: Hembra.</p>
+                    </div>
+                    <div class="card-footer">
+                      <small class="text-muted">Last updated 3 mins ago</small>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="box gato anio1 chico macho">
+                <div class="col">
+                    <div class="card" id="card">
+                      <img src="images/adoptar5.webp" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h4 class="card-title">Pedro</h4>
+                        <p class="card-text"> Edad: 5 meses.</p>
+                        <p class="card-text"> Tamaño: Chico.</p>
+                        <p class="card-text"> Sexo: Macho.</p>
+                      </div>
+                      <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box perro anio1a5 grande macho">
+                <div class="col">
+                    <div class="card" id="card">
+                      <img src="images/adoptar9.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h4 class="card-title">Triton</h4>
+                        <p class="card-text"> Edad: 2 años.</p>
+                        <p class="card-text"> Tamaño: Grande.</p>
+                        <p class="card-text"> Sexo: Macho.</p>
+                      </div>
+                      <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box gato anio1 chico hembra">
+                <div class="col">
+                    <div class="card" id="card">
+                      <img src="images/adoptar6.jfif" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h4 class="card-title">Raya</h4>
+                        <p class="card-text"> Edad: 2 meses.</p>
+                        <p class="card-text"> Tamaño: Chica.</p>
+                        <p class="card-text"> Sexo: Hembra.</p>
+                      </div>
+                      <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box perro anio1 chico hembra">
+                <div class="col">
+                    <div class="card" id="card">
+                      <img src="images/adoptar3.webp" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h4 class="card-title">Luna</h4>
+                        <p class="card-text"> Edad: 3 meses.</p>
+                        <p class="card-text"> Tamaño: Mediana.</p>
+                        <p class="card-text"> Sexo: Hembra.</p>
+                      </div>
+                      <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box gato anio1 chico macho">
+                <div class="col">
+                    <div class="card" id="card">
+                      <img src="images/adoptar7.png" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h4 class="card-title">Negro</h4>
+                        <p class="card-text"> Edad: 5 meses.</p>
+                        <p class="card-text"> Tamaño: Chico.</p>
+                        <p class="card-text"> Sexo: Macho.</p>
+                      </div>
+                      <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box gato anio1 chico hembra">
+                <div class="col">
+                    <div class="card" id="card">
+                      <img src="images/adoptar8.webp" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h4 class="card-title">Manchas</h4>
+                        <p class="card-text"> Edad: 4 meses.</p>
+                        <p class="card-text"> Tamaño: Chica.</p>
+                        <p class="card-text"> Sexo: Hembra.</p>
+                      </div>
+                      <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+              </div>
+
+        </section>
+
+<!--MODAL-->
+
+        <div id="modalB" class="modal">
+            
+            <div class="modalContent contentB">
+            
+                <span class="modalClose">x</span>
+
+                <div class="tituloModalB">
+                    
+                    <h2>¿Querés adoptar o ser voluntario?</h2><p>Escribinos!</p>
+            
+                </div>
+
+                    <div class="formulario">
+            
+                        <form name="form" action="https://postman-echo.com/post" method="post">
+
+                            <fieldset>
+                                
+                                <label class="nombre" for="">Nombre* <br>
+                                    <input type="text" name="nombre" id="name" placeholder="p.ej: Juan" maxlength="25" 
+                                    required>
+                                </label> 
+
+                                <label class="apellido">Apellido* <br>
+                                    <input type="text" name="apellido" id="apellido" placeholder="p.ej: Perez" maxlength="25" required>
+                                </label>
+                                
+                                <label class="telef">Telefono<br>
+                                    <input type="number" name="telefono" id="telefono" placeholder="p.ej: 11 55555555">
+                                </label>
+
+                                <label class="email">Email* <br>
+                                    <input type="email" name="email" id="email" placeholder="p.ej: juan@gmail.com" required>
+                                </label>  
+                                <br> 
+                                
+                                <label for="area" class="area">Área que deseas contactar <br>
+                                <select name="area" id="area">
+                                    <option value="">Elegir</option>
+                                    <option value="adopciones">Adopciones</option>
+                                    <option value="voluntariado">Voluntariado</option>
+                                    <option value="donaciones">Donaciones</option>
+                                    <option value="general">General</option>
+                                </select>
+                                </label>
+                                <br>
+
+                                <label>Mensaje* <br>
+                                    <textarea name="comentario" id="" cols="44" rows="6" placeholder="Si tienes alguna duda o consulta puedes escribirla acá, te contactaremos a la brevedad."></textarea> 
+                                </label>
+                                    
+                                <br>
+                                <button type="submit" class="submit">Enviar</button>
+
+                            </fieldset>    
+
+                        </form>
+
+                    </div>
+
+            </div>
+
+        </div>
+        </main>
+
+        <!--FOOTER-->
+
+    <footer>
+        
+        <div class="enlaces">
+            <p>Visitános en Av.Mascotas 2800, CABA. Tambien puedes comunicarte por nuestros teléfonos de contacto : 11545454548 ó 11454545458</p>
+        </div>
+
+        <div class="ifooter">
+            <p>Siguenos en nuestras redes sociales</p>
+            <div class="f1">
+             <a href="https://twitter.com/" target="_blank"> <i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="f1">
+             <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>    
+            </div>
+            <div class="f1">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+            <div class="f1">
+             <a href="mailto: proyectoadoptame@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+
+        <div class="textofinal">
+            <p>Hecho con <i class="fas fa-heart"></i> y <i class="fas fa-coffee"></i> por Maria Bravo</p>
+        </div>  
+     
+    </footer>
+
+    <script src="js/filtros.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Adoptame</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Proyecto Adoptame">
+        <meta name="keywords" content="frontend, html, html5, css, portfolio, github, desarrollo web">
+        
+        <!--fontawesome-->
+        <script src="https://kit.fontawesome.com/cdd1a44c10.js" crossorigin="anonymous"></script>
+
+        <!--favicon-->
+        <link rel="shortcut icon" href="imagenes/favicon.png"> 
+
+        <!--boostrap-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="shortcut icon" href="/icono/code-slash-svgrepo-com.svg" />
+
+        <!--animaciones-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+        <!--css-->
+        <link href="css/style.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+<!--HEADER-->
+
+        <div id="hamburguesa-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <header id="header">
+            <img src="images/logo.png" class="logo"alt="">
+            <div class="containerP">
+                
+                <div class="containerMenu">
+                    <ul id="menu">
+                        <li><a href="#sectionNosotros">nosotros</a></li>
+                        <li><a href="#aportes" >aportes</a></li>
+                        <li><a href="index1.html" target="_blank">adóptanos</a></li>
+                        <button id="modalB" class="modalOpenBtn" onclick="openModal('modalB')">contactános</button>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+<!--MAIN-->
+
+        <main>
+
+<!--SECTION SLIDER-->
+
+        <section id="slider">
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="images/carrousel1.jpg" alt="First slide">
+                    <div class="carousel-caption d-none d-lg-block">
+                        <h5 class="titleSlider">Proyecto</h5>
+                        <h1 class="titleSlider1">ADOPTÁME</h1>
+                        <p class="textoSlider">Estas a un click de salvar una vida</p>
+                      </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="images/carrousel2.jpg" alt="Second slide">
+                    <div class="carousel-caption d-none d-lg-block">
+                        <h5 class="subtitleSlider2">9 DE CADA 10 CACHORROS</h5>
+                        <p class="textoSlider2">que nacen nunca encontrarán un hogar</p>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="images/carrousel3.jpg" alt="Third slide">
+                    <div class="carousel-caption d-none d-lg-block">
+                        <p class="subtitleSlider">Cuando la voluntad <br> existe, hay mil recursos ♡</p>
+                    </div>
+                  </div>
+                </div>
+
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            
+        </section>
+        
+<!--SECTION NOSOTROS-->
+
+            <section id="sectionNosotros" class="sectionNosotros">
+
+                <div id="nosotros" class="nosotros">
+
+                   <h1 class=" titleNosotros">NOSOTROS...</h1>
+
+                     <p>Somos una organización sin fines de lucro liderada por un grupo de voluntarios que buscan superar la situación de sobrepoblación, abandono, crueldad e indiferencia que viven millones de animales en nuestro país, especialmente en Buenos Aires. Propiciamos una actitud de respeto hacia todas las especies, entendiendo que no son “cosas” para ser utilizadas por el ser humano. Rechazamos todo tipo de explotación animal, incluyendo su uso como vestimenta, comida, entretenimiento y experimentación.</p> 
+
+                </div>
+
+                <div id="nosotros2" class="nosotros2">
+
+                    <h2 class="subtitleNosotros">¿COMO TRABAJAMOS?</h2>
+
+                    <div class="itemComo">
+                        <i class="fa fa-paw"></i><p>La acción directa: asistir a animales abandonados en situación de riesgo, promoviendo su adopción y tenencia por parte de hogares responsables que estén en condiciones de brindarles albergue, atención y afecto.
+                    </div>
+
+                    <div class="itemComo">
+                        <i class="fa fa-paw"></i><p>La acción preventiva: fomentar entre el público general la necesidad y la importancia de castrar machos y esterilizar las hembras antes del primer celo y exigiendo a las autoridades la aplicación de las leyes que los obligan a realizar campañas de castración masivas, gratuitas, extendidas, sistemáticas y permanentes, como único medio humanitario, sustentable y no eutanásico de control de la superpoblación animal.</p>
+                    </div>
+
+                    <div class="itemComo">
+                        <i class="fa fa-paw"></i><p>Las acciones en el plano legislativo y judicial: exigir la aplicación de la ley 14.346 de protección animal y denunciar ante las autoridades todo acto de maltrato y crueldad; presentar y apoyar proyectos de ley que beneficien a los animales.</p>
+                    </div>
+
+                    <div class="itemComo">
+                        <i class="fa fa-paw"></i><p>Las actividades educativas: desarrollar actividades educativas sobre trato ético hacia los animales.</p>
+                    </div>
+
+                    <div class="itemComo">
+                        <i class="fa fa-paw"></i><p>Las actividades asistenciales: rescatar animales en situación de riesgo con el fin de recuperarlos y darles la posibilidad de formar parte de una familia que le brinde lo que necesita.</p>
+                    </div>
+
+                    <div class="itemComo">
+                        <i class="fa fa-paw"></i><p>Las actividades solidarias: ecrear lazos de colaboración entre entidades y empresas comprometidos en la problemática animal.</p>
+                    </div>  
+            
+                </div>
+
+                <div class="imgPerros">
+                       <img src="images/perris.png" alt="perros" class="perros"> 
+                    </div>
+
+            </section>
+
+<!--SECTION APORTES-->
+
+        <section id="aportes" class="aportes">
+            
+            <div class="texto1"> 
+
+                <h2>TU APORTE nos ayuda a seguir salvando vidas</h2>
+
+                <p>Cada aporte por más pequeño que sea, significa mucho para ellos.</p>
+
+            </div>
+
+            <div class="imgAportes">
+
+                <div class="aporte">
+				    <a href=""><img src="images/tienda1.png" target="_blank" alt="visita nuestra tienda" class="tienda"/>
+				    </a>
+                </div>
+
+                <div class="aporte">
+                    <a href=""><img src="images/comida.png" target="_blank" alt="dona" class="dona" />
+                        
+                    </a>
+                </div>
+
+                <div class="aporte">
+                    <a href=""><img src="images/gato.png" target="_blank" alt="adopta un perrito" class="adopta"/>
+                   </a>
+                </div>
+
+                <div class="aporte">
+                    <a href=""><img src="images/voluntariado.png" target="_blank" alt="voluntariado" class="voluntarios" />
+                   </a>
+                </div>
+                
+            </section>
+
+<!--SECTION ADOPCIONES-->
+
+            <section id="adopciones" class="adopciones"> 
+
+                <h1 class=" titleAdop">ADOPCIONES FELICES</h1>
+
+                <div id="carouselExampleSlidesOnly" class="carousel slide contenedorSlide2" data-bs-ride="carousel">
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="images/c1.png" class="d-block w-100" alt="perro adoptado">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/c2.png" class="d-block w-100" alt="perro adoptado">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/c3.png" class="d-block w-100" alt="perro adoptado">
+                            </div>
+                        </div>
+
+                </div>
+
+            </section>
+            
+            <div class="agradecer">
+                <p>Gracias a todas las personas dispuestas a formar una familia con estos seres especiales de 4 patas, hacemos un seguimiento continuo de cada caso de adopcion, asegurandonos siempre del bienestar de cada animal adoptado, sigan enviadonos sus fotos y contandonos sus experiencias de ADOPCIONES FELICES</p>
+            </div>
+
+<!--MODALES-->
+
+<div id="modalB" class="modal">
+    
+    <div class="modalContent contentB">
+    
+        <span class="modalClose">x</span>
+
+        <div class="tituloModalB">
+            
+            <h2>¿Querés adoptar o ser voluntario?</h2><p>Escribinos!</p>
+    
+        </div>
+
+            <div class="formulario">
+      
+                <form name="form" action="https://postman-echo.com/post" method="post">
+
+                    <fieldset>
+
+                        
+                        <label class="nombre" for="">Nombre* <br>
+                            <input type="text" name="nombre" id="name" placeholder="p.ej: Juan" maxlength="25" 
+                            required>
+                        </label> 
+
+                        <label class="apellido">Apellido* <br>
+                            <input type="text" name="apellido" id="apellido" placeholder="p.ej: Perez" maxlength="25" required>
+                        </label>
+                        
+                        <label class="telef">Telefono<br>
+                            <input type="number" name="telefono" id="telefono" placeholder="p.ej: 11 55555555">
+                        </label>
+
+                         <label class="email">Email* <br>
+                            <input type="email" name="email" id="email" placeholder="p.ej: juan@gmail.com" required>
+                        </label>  
+                        <br> 
+                        
+                        <label for="area" class="area">Área que deseas contactar <br>
+                        <select name="area" id="area">
+                            <option value="">Elegir</option>
+                            <option value="adopciones">Adopciones</option>
+                            <option value="voluntariado">Voluntariado</option>
+                            <option value="donaciones">Donaciones</option>
+                            <option value="general">General</option>
+                        </select>
+                        </label>
+                        <br>
+
+                        <label>Mensaje* <br>
+                            <textarea name="comentario" id="" cols="44" rows="6" placeholder="Si tienes alguna duda o consulta puedes escribirla acá, te contactaremos a la brevedad."></textarea> 
+                        </label>
+                            
+                        <br>
+                        <button type="submit" class="submit">Enviar</button>
+
+                        </fieldset>    
+
+                    </form>
+
+                </div>
+
+           
+
+        
+
+    </div>
+
+</div>
+
+</main>
+
+<!--FOOTER-->
+
+    <footer>
+        
+        <div class="enlaces">
+            <p>Visitános en Av.Mascotas 2800, CABA. Tambien puedes comunicarte por nuestros teléfonos de contacto : 11545454548 ó 11454545458</p>
+        </div>
+
+        <div class="ifooter">
+            <p>Siguenos en nuestras redes sociales</p>
+            <div class="f1">
+             <a href="https://twitter.com/" target="_blank"> <i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="f1">
+             <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>    
+            </div>
+            <div class="f1">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+            <div class="f1">
+             <a href="mailto: proyectoadoptame@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+
+        <div class="textofinal">
+            <p>Hecho con <i class="fas fa-heart"></i> y <i class="fas fa-coffee"></i> por Maria Bravo</p>
+        </div>  
+     
+    </footer>
+
+    
+
+    <script src="js/script.js"></script>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    </body>
+</html> 
