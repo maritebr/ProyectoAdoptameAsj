@@ -13,7 +13,6 @@ header.addEventListener('click', function () {
     }
 }) 
 
-
 //modal busqueda
 
 let modals = document.getElementsByClassName("modal");
@@ -43,3 +42,6 @@ window.onclick = function(event) {
     currentModal.style.display = "none";
   }
 }
+
+//PRUEBA
+

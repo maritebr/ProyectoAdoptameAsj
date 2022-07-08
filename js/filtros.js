@@ -35,10 +35,10 @@ function removeClass(element, name){
     element.className =arr1.join(" ")
 }
 
+//menu hamburguesa
+
 const hamburguesa = document.getElementById('hamburguesa-menu');
 const header = document.getElementById('header');
-
-//menu hamburguesa
 
 hamburguesa.addEventListener('click', function () {
     header.classList.toggle('visible')

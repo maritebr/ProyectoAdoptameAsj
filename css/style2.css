@@ -117,8 +117,6 @@ a {
 
 /*prueba filtros*/
 
-
-
 .botonEspecie{
     border: none;
     outline: none;
@@ -201,9 +199,41 @@ a {
 }
 
 .card img{
-    height: 270px;
+    height: 270px; 
 }
 
+.col:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+/* .ful-img{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0,0,0,0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+
+}
+
+.ful-img span{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+.ful-img .box{
+    width: 90%;
+    max-width: 600px;
+}
+ */
 /*GALERIA*/
 
 .galeria{
@@ -231,7 +261,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #f6be58d0;
+    background-color: #f6bf58f4;
     margin: auto;
     color: white;
     border: 1px solid #888;
@@ -260,16 +290,6 @@ a {
    padding: 1rem 2rem; 
 }
 
-.contentA select{
-    width: 100%;
-    border: none;
-    font-size: 1rem;
-    background-color: #F2F2F2;
-    border-radius: 10px;
-    color: #747271;
-    padding: 0.5rem;
-}
-
 label{
     
     font-size: 1.2rem;
@@ -284,7 +304,7 @@ label:hover{
 
 .submit{
     
-    background-color: #F2BA52;
+    background-color: #442f09;
     color: white;
     width: 40%;
     height: 3rem;
@@ -295,13 +315,16 @@ label:hover{
 }
 
 .submit:hover{
-    background-color:#474442 ;
+    background-color:#ffffff ;
+    color: #73482F;
+    font-weight: 700;
+    border: #442f09 2px solid;
 }
 
 .submit:focus{
-    box-shadow: 1px 2px 20px -1px #72B3AE;
+    box-shadow: 1px 2px 20px -1px #73482F;
     border-radius: 30px;
-    border: 0.5px #72B3AE solid;
+    border: 0.5px #f1c87a solid;
 }
 
 /*MODAL B*/
@@ -318,12 +341,15 @@ label:hover{
     font-size: 1.5rem;
 }
 
-.email input{
-    width: 32rem;
+.formulario input{
+    width: 30rem;
+}
+label{
+    text-align: left;
 }
 
 select{
-    width: 20rem;
+    width: 30rem;
     border: none;
     font-size: 1rem;
     background-color: #F2F2F2;
@@ -490,6 +516,11 @@ footer{
 
 /*MEDIA QUERIES*/
 
+@media (max-width: 1250px){
+    
+    
+}
+
 @media (min-width: 1025px) {
     #hamburguesa-menu {
         display: none;
@@ -529,4 +560,155 @@ footer{
     #menu li > a {
         font-size: 24px;
     }
+    .filtrosVarios{
+        flex-direction: column; 
+    }
+
+    footer .enlaces{
+        text-align: center;
+    }
+
+    .modalContent{
+        width: 30rem;
+    }
+
+    .formulario input{
+        width: 25rem;
+    }
+    select{
+        width: 25rem;
+    }
+    textarea{
+        width: 25rem;
+    }
 }
+
+@media(max-width: 820px){
+
+    .contenedorSlide2{
+        width: 400px;
+        margin-left: 140px;
+    }
+
+    .titleAdop{
+        font-size: 1.5rem;
+        padding-top: 6rem;
+    }
+
+}
+
+@media(max-width: 700px){
+
+    @keyframes mianimacion {
+        0%{left: 0; top: 0;}
+        25%{left: 100px; top: 0px;}
+        50%{left: 100px; top: 150px;}
+        75%{left:0px; top: 150px;}
+        100%{left: 0; top: 0;}
+    } 
+    .nosotros .titleNosotros, .subtitleNosotros{
+        font-size: 2rem;
+    }
+
+    .nosotros p{
+        font-size: 0.8rem;
+    }
+
+    .itemComo p{
+        font-size: 0.8rem;
+    }
+    .titleAdop{
+        font-size: 1.2rem;
+        padding-top: 6rem;
+    }
+
+    .texto1 h2{
+        font-size: 1.5rem;
+    }
+
+    .texto1 p{
+        font-size: 1.2rem;
+    }
+
+    .contenedorSlide2{
+        width: 450px;
+        margin-right: 50px;
+        
+    }
+    .modalContent{
+        width: 28rem;
+    }
+}
+
+@media(max-width: 400px){
+    .modalContent{
+        width: 25rem;
+    }
+    .formulario input{
+        width: 22rem;
+    }
+    select{
+        width: 22rem;
+    }
+    textarea{
+        width: 22rem;
+    }
+    .tituloModalB h2{
+        font-size: 1.8rem;
+    }
+}
+
+
+@media(max-width: 390px){
+  
+    .nosotros .titleNosotros, .subtitleNosotros{
+        font-size: 2rem;
+    }
+
+    .aporte img{
+        width: 300px;
+        height: 200px;
+    }
+
+    .adopciones{
+        background: #442f09;
+        margin: 0 auto;
+    }
+
+    .titleAdop{
+        padding: 2rem 0 2rem;
+    }
+
+    
+    .contenedorSlide2{
+        width: 250px;
+        margin: 02rem auto 2rem;
+        
+    }
+
+}
+
+@media(max-width: 340px){
+    .aporte img{
+        width: 250px;
+        height: 150px;
+    }
+    .modalContent{
+        width: 20rem;
+    }
+    .formulario input{
+        width: 16rem;
+    }
+    select{
+        width: 16rem;
+    }
+    textarea{
+        width: 16rem;
+    }
+
+    .ifooter p{
+        display: none;
+    }
+
+} 
+   
