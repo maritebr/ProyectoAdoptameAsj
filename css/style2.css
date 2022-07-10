@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&family=Raleway&display=swap');
 
-
 *{
     margin: 0;
     padding: 0;
@@ -95,7 +94,6 @@ a {
     padding: 10px 25px;
     margin-left: 20px;
     font-family: 'Pathway Gothic One', sans-serif;
-
 }
 
 #menu  li a:hover {
@@ -115,6 +113,86 @@ a {
     display: block;
 }
 
+.titleNosotros {
+    width: 100%;
+    margin: auto;
+    display: block;
+    text-align: center;
+    padding-top: 110px;
+
+}
+
+.titleNosotros span{
+    display: inline-block;
+    -webkit-animation: bounce 1s ease infinite alternate;
+    font-size: 80px;
+    color: #F2BA52;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+    0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+    0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.titleNosotros span:nth-child(2) {
+    -webkit-animation-delay: 0.1s;
+}
+
+.titleNosotros span:nth-child(3) {
+    -webkit-animation-delay: 0.3s;
+}
+
+.titleNosotros span:nth-child(4) {
+    -webkit-animation-delay: 0.5s;
+}
+
+.titleNosotros span:nth-child(5) {
+    -webkit-animation-delay: 0.7s;
+}
+
+.titleNosotros span:nth-child(6) {
+    -webkit-animation-delay: 0.9s;
+}
+
+.titleNosotros span:nth-child(7) {
+    -webkit-animation-delay: 1s;
+}
+
+.titleNosotros span:nth-child(8) {
+    -webkit-animation-delay: 0.3s;
+}
+
+.titleNosotros span:nth-child(9) {
+    -webkit-animation-delay: 0.5s;
+}
+
+.titleNosotros span:nth-child(10) {
+    -webkit-animation-delay: 0.7s;
+}
+
+.titleNosotros span:nth-child(11) {
+    -webkit-animation-delay: 0.9s;
+}
+
+.titleNosotros span:nth-child(12) {
+    -webkit-animation-delay: 1.1s;
+}
+
+.titleNosotros span:nth-child(13) {
+    -webkit-animation-delay: 1.3s;
+}
+
+.titleNosotros span:nth-child(14) {
+    -webkit-animation-delay: 1.5s;
+}
+
+@-webkit-keyframes bounce {
+    100% {
+        top: -20px;
+        text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+        0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
+        0 50px 25px rgba(0, 0, 0, 0.2);
+    }
+}
+
 /*prueba filtros*/
 
 .botonEspecie{
@@ -129,7 +207,6 @@ a {
     display: block;
 }
 
-
 /*FILTROS*/
 
 .filtros{
@@ -137,12 +214,12 @@ a {
     flex-direction: column;
 }
 .filtroContent{
-    padding-top: 100px;
+    padding-top: 30px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 auto;
+    margin: 0 auto; 
 }
 
 .filtroContent .filtrosVarios{
@@ -156,6 +233,7 @@ a {
 
 .filtrosVarios{
     background-color: #f4e2c2;
+    border: #442f09 solid 1px;
 }
 
 .botonesEspecie, .botonesTamano, .botonesEdad, .botonesSexo{
@@ -165,7 +243,7 @@ a {
     justify-content:left;
     align-items: center;
     padding: 2rem 0;
-    
+    border: #442f09 solid 1px;
 }
 
 .botonesEdad .peque{
@@ -181,64 +259,49 @@ a {
     text-transform: uppercase;
     border-radius: 44px;
     letter-spacing: 2px;
-    padding: 10px ;
+    padding: 6px ;
     width: 5rem;
     font-family: 'Pathway Gothic One', sans-serif;
 }
 
 .textoFiltro{
     text-align: center;
-    padding: 2rem;
+    padding: 2rem 0 0;
 }
 .textoFiltro h1{
     font-size: 2rem;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
 }
 .textoFiltro{
     font-size: 1rem;
+}
+
+.card{
+    width: 400px;
+    margin: 50px 0;
 }
 
 .card img{
     height: 270px; 
 }
 
+.card-body{
+    background-color: #f1d5a0;
+}
+
 .col:hover {
-    transform: scale(1.1);
-    transition: 1s;
+    transform: scale(1.2);
+    transition: 0.5s;
 }
 
-/* .ful-img{
-    width: 100%;
-    height: 100vh;
-    background-color: rgb(0,0,0,0.4);
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 99;
-
+.card-footer{
+    background-color: #f1c87a;
 }
-
-.ful-img span{
-    position: absolute;
-    top: 5%;
-    right: 5%;
-    font-size: 30px;
-    color: #fff;
-    cursor: pointer;
-}
-.ful-img .box{
-    width: 90%;
-    max-width: 600px;
-}
- */
-/*GALERIA*/
 
 .galeria{
     padding: 2rem;
-
+    width: 90%;
+    margin: 0 auto;
 }
 
 /*MODAL*/
@@ -255,9 +318,9 @@ a {
     overflow: auto;
     background-color: rgb(0,0,0);
     background-color: rgba(0, 0, 0, 0.351);
-  }
+}
 
-  .modalContent {
+.modalContent {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -267,27 +330,26 @@ a {
     border: 1px solid #888;
     width: 50%;
     border: 1px rgb(129, 125, 125) solid;
-  }
+}
 
-  .modalClose {
+.modalClose {
     text-align: right;
     color: #aaaaaa;
     font-size: 30px;
     font-weight: bold;
-  }
+}
 
-  .modalClose:hover,
-  .modalClose:focus {
+.modalClose:hover,.modalClose:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
-  }
+}
 
 /*MODAL A*/
 
 .contentA, .contentB{
-   text-align: center;
-   padding: 1rem 2rem; 
+    text-align: center;
+    padding: 1rem 2rem; 
 }
 
 label{
@@ -303,7 +365,6 @@ label:hover{
 }
 
 .submit{
-    
     background-color: #442f09;
     color: white;
     width: 40%;
@@ -372,7 +433,6 @@ textarea{
     border-radius: 10px;
     padding: 0.8rem;
     margin: 0.5rem 0;
-    
 }
 
 textarea:focus,input[type=text]:focus{
@@ -399,7 +459,6 @@ footer{
     justify-content: flex-end;
     align-items: center;
     width: 100%;
-    
     /*border: solid 1px;*/
 }
 
@@ -444,7 +503,7 @@ footer{
 
 .ifooter{
     display: flex; 
-   /*border: tomato 1px solid;*/  
+    /*border: tomato 1px solid;*/  
 }
 
 .f1 a{
@@ -487,18 +546,13 @@ footer{
 }
 
 .icono1 i{
-    
     font-size: 1.2rem;
     padding: 0.5rem;
     margin: 0 0.1rem;
-    
 }
 
 .icono1 a{
-    
-    
     font-size: 1rem;
-    
 }
 
 .icono1:hover i{ 
@@ -506,7 +560,6 @@ footer{
     padding: 0.5rem;
     border-radius: 50%;
     color: #FFF5F0 ;
-    
 }
 
 .icono1:hover a{

@@ -1,110 +1,296 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
-        <title></title>
+        <title>Proyecto Adoptame</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <meta name="description" content="Proyecto Adoptame">
+        <meta name="keywords" content="frontend, html, html5, css, portfolio, github, desarrollo web">
+        
         <!--fontawesome-->
         <script src="https://kit.fontawesome.com/cdd1a44c10.js" crossorigin="anonymous"></script>
-        
+
+        <!--favicon-->
+        <link rel="shortcut icon" href="imagenes/favicon.png"> 
+
+        <!--boostrap-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="shortcut icon" href="/icono/code-slash-svgrepo-com.svg" />
+
+        <!--animaciones-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+        <!--css-->
         <link href="css/style.css" rel="stylesheet">
+
     </head>
+
     <body>
 
-        <!--HEADER-->
-
+<!--MENU HAMBURGUESA-->
         <div id="hamburguesa-menu">
             <div></div>
             <div></div>
             <div></div>
         </div>
-
+<!--HEADER-->
         <header id="header">
+
             <img src="images/logo.png" class="logo"alt="">
+
             <div class="containerP">
                 
                 <div class="containerMenu">
                     <ul id="menu">
-                        <li><a href="#sectionNosotros">nosotros</a></li>
-                        <li><a href="#aportes" >aportes</a></li>
+                        <li><a href="index.html#">inicio</a></li>
+                        <li><a href="index.html#sectionNosotros">nosotros</a></li>
+                        <li><a href="index.html#aportes" >aportes</a></li>
                         <li><a href="indexReg.html" target="_blank">adóptanos</a></li>
-                        <button id="modalB" class="modalOpenBtn" onclick="openModal('modalB')">contactános</button>
+                        <button class="modalOpenBtn" onclick="openModal('modalB')">contactános</button>
                     </ul>
                 </div>
+
             </div>
+
         </header>
 
         <section id="sesion" class="sesion">
 
-            
             <img src="images/adopta1.jpg" alt="">
-            
-
+        
             <div class="imageReg1">
                 <h1>Inicia sesión</h1>
-            
+                    
+                <form action="" class="formulario1 registro" id="formulario1">
 
-            <form action="" class="registro">
-                <label for="">Email <br>
-                    <input type="email" name="email" id="email" placeholder="p.ej: juan@gmail.com" required>
-                </label>
-                <br>
-                <label for="">Contraseña <br>
-                    <input type="password" name="password" id="password"  required>
-                </label>
-                <br><br>
-                
-                <a href="index1.html" class="ingresar">ingresar</a>
+                    <div class="sesion1">
 
-            </form>
-            <br>
+                        <div class="formulario_grupo" id="grupo_usuario">
+                            <label for="usuario" class="formulario_label">USUARIO</label>
+                            <div class="formulario_grupo-input">
+                                <input type="text" class="formulario_input" name="usuario" id="usuario" placeholder="p.ej: Juan21" maxlength="16" minlength="4" required>
+                                <i class="formulario_validacion-estado fas fa-times-circle"></i>
+                            </div>
+                            <p class="formulario_input-error">Debe contener de 4 a 16 dígitos. Puede contener números, letras y guión bajo.</p>
+                        </div>
 
-            <div class="resetCont">
-                <a href="">Olvide mi contraseña</a>
-            </div>
-            <br>
+                        <div class="formulario_grupo" id="grupo_password">
+				            <label for="password" class="formulario_label">CONTRASEÑA</label>
+				            <div class="formulario_grupo-input">
+					            <input type="password" class="formulario_input" name="password" id="password" minlength="4" maxlength="12" required>
+					            <i class="formulario_validacion-estado fas fa-times-circle"></i>
+				            </div>
+                            <p class="formulario_input-error">La contraseña debe contener de 4 a 12 dígitos.</p>
+			            </div>
 
-            <div class="registrar">
-                <a href="">Quiero registrarme</a>
-            </div>
+                        <div class="formulario_grupo formulario_grupo-btn-enviar">
+				            <button type="submit" class="formulario_btn ingresar">ingresar</button><a href="index1.html" class="ingresar1" >.</a> 
+				            <p class="formulario_mensaje-exito" id="formulario_mensaje-exito">Formulario enviado exitosamente!</p>
+                            
+			            </div>
+
+                    </div>
+
+                </form>
+
+                <div class="resetCont">
+                    <a href="">Olvide mi contraseña</a>
+                </div>
+
+                <div class="registrar">
+                    <button href="" class="modalOpenBtn" onclick="openModal('modalC')">REGISTRARME</button>
+                </div>
         
-        </div>
+            </div>
+            
         </section>
 
+<!--MODALES-->
 
+        <div id="modalC" class="modal">
+            
+            <div class="modalContent contentC">
+            
+                <span class="modalClose">x</span>
 
-        <!--FOOTER-->
+                <div class="tituloModalB">
+                    
+                    <h2>Registrate</h2>
+            
+                </div>
 
-    <footer>
-        
-        <div class="enlaces">
-            <p>Visitános en Av.Mascotas 2800, CABA. Tambien puedes comunicarte por nuestros teléfonos de contacto : 11545454548 ó 11454545458</p>
+                <form action="procesar.php" method="post" class="formulario2" id="formulario2">
+                
+                    <div class="formulario_grupo" id="grupo_usuario2">
+                        <label for="usuario" class="formulario_label">USUARIO</label>
+                        <div class="formulario_grupo-input">
+                            <input type="text" class="formulario_input" name="usuario" id="usuario2" placeholder="p.ej juan21" required>
+                        </div>
+                        <p class="formulario_input-error">Debe contener de 4 a 16 dígitos. Puede contener números, letras y guión bajo.</p>
+                    </div>
+
+                    <div class="formulario_grupo" id="grupo_nombre2">
+                        <label for="nombre" class="formulario_label">NOMBRE</label>
+                        <div class="formulario_grupo-input">
+                            <input type="text" class="formulario_input" name="name" id="nombre2" placeholder="p.ej. Juan " required>
+                        </div>
+                    </div>
+
+                    <div class="formulario_grupo" id="grupo_nombre2">
+                        <label for="apellido" class="formulario_label">APELLIDO</label>
+                        <div class="formulario_grupo-input">
+                            <input type="text" class="formulario_input" name="apellido" id="apellido" placeholder="p.ej. Alvarez " required>
+                        </div>
+                    </div>
+
+                    <div class="formulario_grupo" id="grupo_password_1">
+                        <label for="password" class="formulario_label">CONTRASEÑA</label>
+                        <div class="formulario_grupo-input">
+                            <input type="password" class="formulario_input" name="password" id="password_1">
+                        </div>
+                        <p class="formulario_input-error">Debe contener de 4 a 12 dígitos.</p>
+                    </div>
+
+                    <div class="formulario_grupo" id="grupo_password2">
+                        <label for="password2" class="formulario_label">REPETIR CONTRASEÑA</label>
+                        <div class="formulario_grupo-input">
+                            <input type="password" class="formulario_input" name="password2" id="password2">
+                        </div>
+                        <p class="formulario_input-error">Ambas contraseñas deben ser iguales.</p>
+                    </div>
+
+                    <div class="formulario_grupo" id="grupo_correo2">
+                        <label for="correo" class="formulario_label">EMAIL</label>
+                        <div class="formulario_grupo-input">
+                            <input type="email" class="formulario_input" name="correo" id="correo2" placeholder="correo@correo.com" required>
+                        </div>
+                        <p class="formulario_input-error">Formato del correo: correo@correo.com</p>
+                    </div>
+
+                    <div class="formulario_grupo" id="grupo_telefono2">
+                        <label for="telefono" class="formulario_label">TELÉFONO</label>
+                        <div class="formulario_grupo-input">
+                            <input type="text" class="formulario__input" name="telefono" id="telefono2" placeholder="1155555555" pattern="^[0-9]+">
+                        </div>
+                        <p class="formulario_input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
+                    </div>
+
+                    <div class="formulario_grupo" id="grupo_terminos">
+                        <label class="formulario_label">Acepto los Términos y Condiciones
+                            <input class="formulario_checkbox" type="checkbox" name="terminos" id="terminos" required>
+                        </label>
+                    </div>
+
+                    <div class="formulario__grupo formulario__grupo-btn-enviar ">
+                        <button type="submit" class="formulario__btn submit">Registrarme</button>
+                    </div>
+
+                </form>
+
+            </div>
+
         </div>
 
-        <div class="ifooter">
-            <p>Siguenos en nuestras redes sociales</p>
-            <div class="f1">
-             <a href="https://twitter.com/" target="_blank"> <i class="fab fa-twitter"></i></a>
-            </div>
-            <div class="f1">
-             <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>    
-            </div>
-            <div class="f1">
-            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
-            </div>
-            <div class="f1">
-             <a href="mailto: proyectoadoptame@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
 
-        <div class="textofinal">
-            <p>Hecho con <i class="fas fa-heart"></i> y <i class="fas fa-coffee"></i> por Maria Bravo</p>
-        </div>  
-     
-    </footer>
-
+        <div v id="modalB" class="modal">
     
-        <script src="js/script.js"></script>
+            <div class="modalContent contentB">
+    
+                <span class="modalClose">x</span>
+
+                <div class="tituloModalB">
+                    <h2>¿Querés adoptar o ser voluntario?</h2><p>Escribinos!</p>
+                </div>
+
+                <div class="formulario" id="formulario">
+      
+                    <form name="form" action="procesar1.php" method="post">
+
+                        <fieldset>
+
+                            <label class="nombre" for="">Nombre* <br>
+                                <input type="text" name="nombre" id="name" placeholder="p.ej: Juan" maxlength="25" 
+                                required>
+                            </label><br> 
+
+                            <label class="apellido">Apellido* <br>
+                                <input type="text" name="apellido" id="apellido" placeholder="p.ej: Perez" maxlength="25" required>
+                            </label><br>
+                            
+                            <label class="telef">Telefono<br>
+                                <input type="number" name="telefono" id="telefono" placeholder="p.ej: 1155555555" maxlength="10" pattern="/^\d{7,14}$/">
+                            </label><br>
+
+                            <label class="email">Email* <br>
+                                <input type="email" name="email" id="email" placeholder="p.ej: juan@gmail.com" required>
+                            </label><br>  
+                            
+                            <label for="area" class="area">Área que deseas contactar <br>
+                                <select name="area" id="area">
+                                    <option value="">Elegir</option>
+                                    <option value="adopciones">Adopciones</option>
+                                    <option value="voluntariado">Voluntariado</option>
+                                    <option value="donaciones">Donaciones</option>
+                                    <option value="general">General</option>
+                                </select>
+                            </label><br>
+                            
+                            <label>Mensaje* <br>
+                                <textarea name="comentario" id="" cols="44" rows="6" placeholder="Si tienes alguna duda o consulta puedes escribirla acá, te contactaremos a la brevedad."></textarea> 
+                            </label><br>
+                                
+                            <button type="submit" class="submit">Enviar</button>
+
+                        </fieldset>    
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+<!--FOOTER-->
+        <footer>
+            
+            <div class="enlaces">
+                <p>Visitános en Av.Mascotas 2800, CABA. Tambien puedes comunicarte por nuestros teléfonos de contacto : 11545454548 ó 11454545458</p>
+            </div>
+
+            <div class="ifooter">
+                <p>Siguenos en nuestras redes sociales</p>
+                <div class="f1">
+                <a href="https://twitter.com/" target="_blank"> <i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="f1">
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>    
+                </div>
+                <div class="f1">
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                </div>
+                <div class="f1">
+                <a href="mailto: proyectoadoptame@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="textofinal">
+                <p>Hecho con <i class="fas fa-heart"></i> y <i class="fas fa-coffee"></i> por Maria Bravo</p>
+            </div>  
+        
+        </footer>
+
+        
+
+    <script src="js/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
     </body>
-</html>
+</html> 
