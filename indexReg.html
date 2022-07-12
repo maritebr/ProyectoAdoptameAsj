@@ -84,8 +84,8 @@
 			            </div>
 
                         <div class="formulario_grupo formulario_grupo-btn-enviar">
-				            <button type="submit" class="formulario_btn ingresar">ingresar</button><a href="index1.html" class="ingresar1" >.</a> 
-				            <p class="formulario_mensaje-exito" id="formulario_mensaje-exito">Formulario enviado exitosamente!</p>
+				            <button type="button" id="ingresar" class="formulario_btn ingresar" onclick="login()">ingresar</button>
+                            <div id="toast"><div id="img"><i class="fa fa-paw"></i></div><div id="desc">Tus datos no son válidos</div></div>
                             
 			            </div>
 
@@ -121,69 +121,50 @@
 
                 <form action="procesar.php" method="post" class="formulario2" id="formulario2">
                 
-                    <div class="formulario_grupo" id="grupo_usuario2">
-                        <label for="usuario" class="formulario_label">USUARIO</label>
-                        <div class="formulario_grupo-input">
-                            <input type="text" class="formulario_input" name="usuario" id="usuario2" placeholder="p.ej juan21" required>
-                        </div>
-                        <p class="formulario_input-error">Debe contener de 4 a 16 dígitos. Puede contener números, letras y guión bajo.</p>
-                    </div>
+                    
+                    <label for="usuario" >USUARIO <br>
+                        <input type="text" class="registro-input" name="usuario" id="usuario-r" placeholder="ej. juan21" required  max="16" min="4" autocomplete="off">
+                        <p >Debe contener de 4 a 16 dígitos. Puede contener números, letras y guión bajo.</p>
+                    </label>
+                    
+                    <label for="nombre">NOMBRE <br>
+                        <input type="text" class="registro-input" name="name" id="nombre2" placeholder="ej. Juan " required autocomplete="off">
+                    </label>
+                    
+                    <label for="apellido">APELLIDO <br>
+                        <input type="text" class="registro-input" name="apellido" id="apellido" placeholder="p.ej. Alvarez " required autocomplete="off">
+                    </label>
+            
+                    <label for="password">CONTRASEÑA <br>
+                        <input type="password" class="registro-input" name="password" id="password_1" min="4" max="12" required>
+                        <p>Debe contener de 4 a 12 dígitos.</p>
+                    </label>
 
-                    <div class="formulario_grupo" id="grupo_nombre2">
-                        <label for="nombre" class="formulario_label">NOMBRE</label>
-                        <div class="formulario_grupo-input">
-                            <input type="text" class="formulario_input" name="name" id="nombre2" placeholder="p.ej. Juan " required>
-                        </div>
-                    </div>
+                    
+                    <label for="password2">REPETIR CONTRASEÑA <br>
+                        <input type="password" class="registro-input" name="password2" id="password2" min="4" max="12" required>
+                            <p >Ambas contraseñas deben ser iguales.</p>
+                    </label>
 
-                    <div class="formulario_grupo" id="grupo_nombre2">
-                        <label for="apellido" class="formulario_label">APELLIDO</label>
-                        <div class="formulario_grupo-input">
-                            <input type="text" class="formulario_input" name="apellido" id="apellido" placeholder="p.ej. Alvarez " required>
-                        </div>
-                    </div>
+                    
+                    <label for="correo">EMAIL <br>
+                        <input type="email" class="registro-input" name="correo" id="correo2" placeholder="correo@correo.com" required autocomplete="off">
+                        <p>Formato del correo: correo@correo.com</p>
+                    </label>
 
-                    <div class="formulario_grupo" id="grupo_password_1">
-                        <label for="password" class="formulario_label">CONTRASEÑA</label>
-                        <div class="formulario_grupo-input">
-                            <input type="password" class="formulario_input" name="password" id="password_1">
-                        </div>
-                        <p class="formulario_input-error">Debe contener de 4 a 12 dígitos.</p>
-                    </div>
+                    
+                    <label for="telefono">TELÉFONO <br>
+                        <input type="text" class="registro-input" name="telefono" id="telefono2" placeholder="1155555555" pattern="^[0-9]+" autocomplete="off">
+                        <p >El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
+                    </label>
 
-                    <div class="formulario_grupo" id="grupo_password2">
-                        <label for="password2" class="formulario_label">REPETIR CONTRASEÑA</label>
-                        <div class="formulario_grupo-input">
-                            <input type="password" class="formulario_input" name="password2" id="password2">
-                        </div>
-                        <p class="formulario_input-error">Ambas contraseñas deben ser iguales.</p>
-                    </div>
-
-                    <div class="formulario_grupo" id="grupo_correo2">
-                        <label for="correo" class="formulario_label">EMAIL</label>
-                        <div class="formulario_grupo-input">
-                            <input type="email" class="formulario_input" name="correo" id="correo2" placeholder="correo@correo.com" required>
-                        </div>
-                        <p class="formulario_input-error">Formato del correo: correo@correo.com</p>
-                    </div>
-
-                    <div class="formulario_grupo" id="grupo_telefono2">
-                        <label for="telefono" class="formulario_label">TELÉFONO</label>
-                        <div class="formulario_grupo-input">
-                            <input type="text" class="formulario__input" name="telefono" id="telefono2" placeholder="1155555555" pattern="^[0-9]+">
-                        </div>
-                        <p class="formulario_input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
-                    </div>
-
-                    <div class="formulario_grupo" id="grupo_terminos">
-                        <label class="formulario_label">Acepto los Términos y Condiciones
-                            <input class="formulario_checkbox" type="checkbox" name="terminos" id="terminos" required>
-                        </label>
-                    </div>
-
-                    <div class="formulario__grupo formulario__grupo-btn-enviar ">
-                        <button type="submit" class="formulario__btn submit">Registrarme</button>
-                    </div>
+                    <label>Acepto los Términos y Condiciones <br>
+                        <input class="registro_checkbox" type="checkbox" name="terminos" id="terminos" required>
+                    </label>
+                    <br>
+                    <button type="submit" class="formulario__btn submit" onclick="launch_toast()">Registrarme</button>
+                   
+                    <div id="toast"><div id="img"><i class="fa fa-paw"></i></div><div id="desc">Tu registro fue enviado</div></div>
 
                 </form>
 
@@ -210,19 +191,19 @@
 
                             <label class="nombre" for="">Nombre* <br>
                                 <input type="text" name="nombre" id="name" placeholder="p.ej: Juan" maxlength="25" 
-                                required>
+                                required autocomplete="off">
                             </label><br> 
 
                             <label class="apellido">Apellido* <br>
-                                <input type="text" name="apellido" id="apellido" placeholder="p.ej: Perez" maxlength="25" required>
+                                <input type="text" name="apellido" id="apellido" placeholder="p.ej: Perez" maxlength="25" required autocomplete="off">
                             </label><br>
                             
                             <label class="telef">Telefono<br>
-                                <input type="number" name="telefono" id="telefono" placeholder="p.ej: 1155555555" maxlength="10" pattern="/^\d{7,14}$/">
+                                <input type="number" name="telefono" id="telefono" placeholder="p.ej: 1155555555" maxlength="10" pattern="/^\d{7,14}$/" autocomplete="off">
                             </label><br>
 
                             <label class="email">Email* <br>
-                                <input type="email" name="email" id="email" placeholder="p.ej: juan@gmail.com" required>
+                                <input type="email" name="email" id="email" placeholder="p.ej: juan@gmail.com" required autocomplete="off">
                             </label><br>  
                             
                             <label for="area" class="area">Área que deseas contactar <br>

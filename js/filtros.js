@@ -1,38 +1,35 @@
 filterObjects("all");
 
-function filterObjects(c){
-    let x, i;
-    x= document.getElementsByClassName("box")
-    if(c == "all") c="";
-    for (i = 0; i < x.length; i++) {
-        removeClass(x[i], "show");
-        if (x[i].className.indexOf(c) > -1) addClass(x[i],"show")
+function filterObjects(caracteristica){
+    let box= document.getElementsByClassName("box")
+    if(caracteristica == "all"){
+      caracteristica="";  
+    } 
+    for (let i = 0; i < box.length; i++) {
+        removeClass(box[i], "show");
+        if (box[i].className.indexOf(caracteristica) > -1) addClass(box[i],"show")
     }
-
 }
 
 function addClass(element,name){
-    let i,arr1,arr2;
-    arr1= element.className.split(" ");
-    arr2= name.split(" ");
-    for ( i = 0; i < arr2.length; i++) {
-        if(arr1.indexOf(arr2[i]) == -1){
-            element.className += " "+ arr2[i];
+    let array1= element.className.split(" ");
+    let array2= name.split(" ");
+    for ( let i = 0; i < array2.length; i++) {
+        if(array1.indexOf(array2[i]) == -1){
+            element.className += " "+ array2[i];
         }
-        
     }
 }
 
 function removeClass(element, name){
-    let i,arr1,arr2;
-    arr1= element.className.split(" ");
-    arr2= name.split(" ");
-    for ( i = 0; i < arr2.length; i++) {
-        while(arr1.indexOf(arr2[i])> -1){
-            arr1.splice(arr1.indexOf(arr2[i]),1);
+    let array1= element.className.split(" ");
+    let array2= name.split(" ");
+    for (let i = 0; i < array2.length; i++) {
+        while(array1.indexOf(array2[i])> -1){
+            array1.splice(array1.indexOf(array2[i]),1);
         }
     }
-    element.className =arr1.join(" ")
+    element.className =array1.join(" ")
 }
 
 

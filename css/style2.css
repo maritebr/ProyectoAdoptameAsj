@@ -567,6 +567,16 @@ footer{
     text-decoration: none;
 }
 
+input:focus{
+    Background-color:#464536e8;
+    color: white; 
+}
+
+input:invalid {
+    background-color: rgba(249, 223, 164, 0.863);
+    border: solid white;
+}
+
 /*MEDIA QUERIES*/
 
 @media (max-width: 1250px){

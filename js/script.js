@@ -20,8 +20,8 @@ header.addEventListener('click', function () {
 
 //MODALES
 // funcion para abrir el modal a traves del id
-function openModal(id) {
-  for (i = 0; i < modals.length; i++) {
+const openModal = (id) => {
+  for (let i = 0; i < modals.length; i++) {
     if (modals[i].getAttribute('id') == id) {
       currentModal = modals[i];
       currentModal.style.display = "block";
@@ -30,12 +30,12 @@ function openModal(id) {
   }
 }
 // Cuando el usuario hace clic en el botón, abre modal con el mismo identificación
-modalOpenBtn.onclick = function() {
+modalOpenBtn.onclick = () => {
   let currentID = modalOpenBtn.getAttribute('id');
   openModal(currentID);
 }
 // Cuando el usuario haga clic en cualquier lugar fuera del modal o la X, cierre
-window.onclick = function(event) {
+window.onclick = (event) => {
   if (event.target == currentModal || event.target.getAttribute('class') == 'modalClose') {
     currentModal.style.display = "none";
   }
@@ -87,21 +87,24 @@ inputs.forEach((input) => {
 	input.addEventListener('blur', validarFormulario);
 });
 
-formulario1.addEventListener('submit', (e) => {
-	e.preventDefault();
-	if(campos.usuario && campos.password ){
-		formulario1.reset();
 
-		document.getElementById('formulario_mensaje-exito').classList.add('formulario_mensaje-exito-activo');
-		setTimeout(() => {
-			document.getElementById('formulario_mensaje-exito').classList.remove('formulario_mensaje-exito-activo');
-		}, 5000);
+//ACCESO LOGIN
+const login = () =>{
 
-		document.querySelectorAll('.formulario_grupo-correcto').forEach((icono) => {
-			icono.classList.remove('formulario_grupo-correcto');
-		});
-	} else {
-		document.getElementById('formulario_mensaje').classList.add('formulario_mensaje-activo');
+	let user = document.getElementById("usuario").value;
+	let pass = document.getElementById("password").value;
+
+	if (user == "Maria" && pass == "123456") {
+		window.location="index1.html"
+	}else{
+		launch_toast()
 	}
-});
+} 
 
+//toast
+const launch_toast =() => {
+    
+    var x = document.getElementById("toast")
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
+}

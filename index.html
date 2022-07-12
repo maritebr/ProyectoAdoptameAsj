@@ -19,7 +19,7 @@
 
         <!--animaciones-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
         <!--css-->
         <link href="css/style.css" rel="stylesheet">
 
@@ -203,7 +203,7 @@
                     <div class="aporte post">
                         <a href=""><img src="images/tienda1.png" target="_blank" alt="visita nuestra tienda" class="tienda"/></a>
                         <div class="pie">
-                            <h2>Visita nuestra tienda</h2>
+                            <h2>Visitá nuestra tienda</h2>
                         </div>
                     </div>
 
@@ -281,19 +281,19 @@
                             <fieldset>
 
                                 <label class="nombre" for="">Nombre* <br>
-                                    <input type="text" name="nombre" id="name" placeholder="p.ej: Juan" maxlength="25" required>
+                                    <input type="text" name="nombre" id="name" placeholder="ej: Juan" maxlength="25" required autocomplete="off">
                                 </label><br> 
 
                                 <label class="apellido">Apellido* <br>
-                                    <input type="text" name="apellido" id="apellido" placeholder="p.ej: Perez" maxlength="25" required>
+                                    <input type="text" name="apellido" id="apellido" placeholder="ej: Perez" maxlength="25" required autocomplete="off">
                                 </label><br>
                                     
                                 <label class="telef">Telefono<br>
-                                    <input type="number" name="telefono" id="telefono" placeholder="p.ej: 1155555555" maxlength="10" pattern="/^\d{7,14}$/">
+                                    <input type="number" name="telefono" id="telefono" placeholder="ej: 1155555555" maxlength="10" pattern="/^\d{7,14}$/" autocomplete="off">
                                 </label><br>
 
                                 <label class="email">Email* <br>
-                                    <input type="email" name="email" id="email" placeholder="p.ej: juan@gmail.com" required>
+                                    <input type="email" name="email" id="email" placeholder="ej: juan@gmail.com" required autocomplete="off">
                                 </label><br>  
                                     
                                 <label for="area" class="area">Área que deseas contactar <br>
@@ -310,7 +310,8 @@
                                     <textarea name="comentario" id="" cols="44" rows="6" placeholder="Si tienes alguna duda o consulta puedes escribirla acá, te contactaremos a la brevedad."></textarea> 
                                 </label><br>
                                         
-                                <button type="submit" class="submit">Enviar</button>
+                                <button id="ingresar" class="submit">Enviar</button>
+
 
                             </fieldset>    
 
@@ -357,6 +358,8 @@
 
 
     <script src="js/script.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>  
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
